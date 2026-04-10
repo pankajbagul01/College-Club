@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshops | V-Click Photography Club</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="photographer-header">
+    <div class="header-content">
+      <div class="logo-wrapper">
+        <img src="img/vclick logo.jpg" alt="V-Click Logo" class="aperture-spin" />
+        <div class="logo-text">
+          <h1>V-Click</h1>
+          <p class="tagline">Through the lens of VIT</p>
+        </div>
+      </div>
+      <nav class="photographer-nav">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="workshops.html" class="nav-link active">Workshops</a>
+        <a href="join.html" class="nav-link cta-button">Join Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="gallery-main">
+    <section class="gallery-header">
+      <h2 class="section-title">📸 Upcoming Workshops</h2>
+      <p style="text-align: center;">Join our hands-on events to master your craft – from basic camera techniques to
+        creative editing.</p>
+    </section>
+
+    <!-- Upcoming Workshops -->
+    <section class="gallery-grid">
+      <div class="photo-card">
+        <img src="img/workshop1.png" alt="Workshop 1" />
+        <div class="photo-info">
+          <span class="photo-title">Basics of DSLR</span>
+          <span class="photo-author">March 30, 2025 • Hosted by @vclick_team</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="img/workshop2.png" alt="Workshop 2" />
+        <div class="photo-info">
+          <span class="photo-title">Night Photography Walk</span>
+          <span class="photo-author">April 12, 2025 • @arjun_v</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="img/workshop3.png" alt="Workshop 3" />
+        <div class="photo-info">
+          <span class="photo-title">Mobile Editing Crash Course</span>
+          <span class="photo-author">May 5, 2025 • @neha_s</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Highlights -->
+    <section style="margin-top: 5rem;">
+      <h2 class="section-title">🎞️ Past Highlights</h2>
+      <div class="gallery-grid">
+        <div class="photo-card">
+          <img src="/img/creative.jpg" alt="Past Workshop 1" />
+          <div class="photo-info">
+            <span class="photo-title">Creative Portraits</span>
+            <span class="photo-author">December 2024</span>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img src="img/pexels-sudipta-1603650.jpg" alt="Past Workshop 2" />
+          <div class="photo-info">
+            <span class="photo-title">Lightroom Mastery</span>
+            <span class="photo-author">October 2024</span>
+          </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="photographer-footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h4>V-Click</h4>
+          <p>The official photography club of VIT Pune since 2015</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#" class="social-icon"><img src="img/whatsapp.png" alt="Flickr"></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span id="year"></span> V-Click Photography Club. All images © their respective authors.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      fetch('workshops.json')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.querySelector('.gallery-grid');
+          container.innerHTML = '';
+          data.forEach(workshop => {
+            container.innerHTML += 
+              <div class="photo-card">
+                <img src="${workshop.image}" alt="${workshop.title}">
+                <div class="photo-info">
+                  <span class="photo-title">${workshop.title}</span>
+                  <span class="photo-author">${workshop.date} • ${workshop.host}</span>
+                </div>
+              </div>
+            ;
+          });
+        });
+    </script>
+    
+
+
+</body>
+
+</html>

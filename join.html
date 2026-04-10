@@ -1,139 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VClick & Photography Club - Fresher Registration</title>
+    <title>Join V-Click | Photography Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<header style="display: flex; flex-wrap: nowrap; ">
-    <logo style="display: flex; flex-wrap: nowrap;"> 
-        <img src="img/vclick logo.jpg" alt="logo" width="130pxpx">
-        <div>
-            <h1>V-Click</h1>
-            <h3>The Official Photography club of VIT,Pune</h3>
+
+<body>
+    <header class="photographer-header">
+        <div class="header-content">
+            <div class="logo-wrapper">
+                <img src="img/vclick logo.jpg" alt="V-Click Logo" class="aperture-spin">
+                <div class="logo-text">
+                    <h1>V-Click</h1>
+                    <p class="tagline">Through the lens of VIT</p>
+                </div>
+            </div>
+            <nav class="photographer-nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshops.html" class="nav-link">Workshops</a>
+                <a href="join.html" class="nav-link active">Join Now</a>
+            </nav>
         </div>
-    </logo>
-    <nav style="padding-top: 74px; font-size:x-large; padding-left: 450px; word-spacing: 40px; text-decoration: none;">
-        <a href="home.html" style=" text-decoration: none;">Home</a>
-        <a href="Gallary.html" style=" text-decoration: none;">Gallary</a>
-        <a href="register.html" style=" text-decoration: none;">Register</a>
-        <a href="About.html" style="word-spacing: normal; text-decoration: none;">About us</a>
-    </nav>
-</header>
-<body >
-    <center>
-        <h1>📷 VClick & Photography Club</h1>
-        <h2>Fresher Registration Form</h2>
-        
-        <table border="0" width="60%" cellpadding="10" bgcolor="white">
-            <tr>
-                <td colspan="2" align="center">
-                    <b>Capture Your Spot in Our Club!</b>
-                    <br><br>
-                </td>
-            </tr>
-            
-            <form >
-            <tr bgcolor="#f9f9f9">
-                <td width="30%"><b>📸 Full Name:</b></td>
-                <td><input type="text" name="fullname" size="30" required placeholder="Your photogenic name"></td>
-            </tr>
-            <tr>
-                <td><b>🆔 Student ID:</b></td>
-                <td><input type="text" name="studentid" size="30" required placeholder="Your unique ID"></td>
-            </tr>
-            <tr bgcolor="#f9f9f9">
-                <td><b>✉️ Email:</b></td>
-                <td><input type="email" name="email" size="30" required placeholder="Where we'll send photo updates"></td>
-            </tr>
-            <tr>
-                <td><b>📱 Phone:</b></td>
-                <td><input type="tel" name="phone" size="30" required placeholder="For shoot reminders"></td>
-            </tr>
-            <tr bgcolor="#f9f9f9">
-                <td><b>🏛️ Department:</b></td>
-                <td>
-                    <select name="department" required style="padding:5px">
-                        <option value="">Select Department</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Mechanical">Mechanical</option>
-                        <option value="Civil">Civil</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><b>🎓 Year of Study:</b></td>
-                <td>
-                    <select name="year" required style="padding:5px">
-                        <option value="">Select Year</option>
-                        <option value="1st Year">1st Year (Freshman)</option>
-                        <option value="2nd Year">2nd Year (Sophomore)</option>
-                        <option value="3rd Year">3rd Year (Junior)</option>
-                        <option value="4th Year">4th Year (Senior)</option>
-                    </select>
-                </td>
-            </tr>
-            <tr bgcolor="#f9f9f9">
-                <td><b>🌟 Experience Level:</b></td>
-                <td>
-                    <select name="experience_level" required style="padding:5px">
-                        <option value="">Select your level</option>
-                        <option value="Beginner">Beginner (Just starting)</option>
-                        <option value="Hobbyist">Hobbyist (Casual shooter)</option>
-                        <option value="Enthusiast">Enthusiast (Knows basics)</option>
-                        <option value="Advanced">Advanced (Shoots manually)</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><b>📷 Equipment:</b></td>
-                <td>
-                    <input type="text" name="equipment" size="30" placeholder="Camera/phone model you use">
-                </td>
-            </tr>
-            <tr bgcolor="#f9f9f9">
-                <td><b>💡 Why join us?</b></td>
-                <td>
-                    <textarea name="reason" rows="3" cols="30" required placeholder="Tell us why you love photography..."></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td><b>🌈 Favorite Photography Style:</b></td>
-                <td>
-                    <select name="fav_style" style="padding:5px">
-                        <option value="">Select preferred style</option>
-                        <option value="Portrait">Portrait</option>
-                        <option value="Landscape">Landscape</option>
-                        <option value="Street">Street</option>
-                        <option value="Wildlife">Wildlife</option>
-                        <option value="Sports">Sports/Action</option>
-                        <option value="Macro">Macro</option>
-                        <option value="Astro">Astrophotography</option>
-                    </select>
-                </td>
-            </tr>
-            <tr bgcolor="#f9f9f9">
-                <td><b>📅 Availability:</b></td>
-                <td>
-                    <input type="checkbox" name="weekdays"> Weekdays
-                    <input type="checkbox" name="weekends"> Weekends
-                    <input type="checkbox" name="mornings"> Mornings
-                    <input type="checkbox" name="evenings"> Evenings
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <br>
-                    <input type="submit" value="📸 Submit Application" href="club.html">
-                    <input type="reset" value="🔄 Reset Form">
-                    <br><br>
-                </td>
-            </tr>
-            </form>
-        </table>
-        
-    </center>
+    </header>
+
+    <main class="gallery-main">
+
+        <div id="video-container"></div>
+
+        <section class="gallery-header">
+            <h2 class="section-title">Join V-Click</h2>
+            <p style="text-align: center;">Become part of our photography family. Fill out the form below and let’s
+                capture memories together! 📸</p>
+        </section>
+
+        <form class="join-form" action="#" method="post"
+            style="max-width: 800px; margin: auto; display: grid; gap: 1.5rem;">
+            <div>
+                <label>📸 Full Name:</label>
+                <input type="text" name="fullname" required placeholder="Your photogenic name" class="input">
+            </div>
+            <div>
+                <label>🆔 Student ID:</label>
+                <input type="text" name="studentid" required placeholder="Your unique ID" class="input">
+            </div>
+            <div>
+                <label>✉️ Email:</label>
+                <input type="email" name="email" required placeholder="Where we'll send photo updates" class="input">
+            </div>
+            <div>
+                <label>📱 Phone:</label>
+                <input type="tel" name="phone" required placeholder="For shoot reminders" class="input">
+            </div>
+            <div>
+                <label>🏛️ Department:</label>
+                <select name="department" required class="input">
+                    <option value="">Select Department</option>
+                    <option>Computer Science</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label>🎓 Year of Study:</label>
+                <select name="year" required class="input">
+                    <option value="">Select Year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+            </div>
+            <div>
+                <label>🌟 Experience Level:</label>
+                <select name="experience_level" required class="input">
+                    <option value="">Select your level</option>
+                    <option>Beginner</option>
+                    <option>Hobbyist</option>
+                    <option>Enthusiast</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+            <div>
+                <label>📷 Equipment:</label>
+                <input type="text" name="equipment" placeholder="Camera/phone model you use" class="input">
+            </div>
+            <div>
+                <label>💡 Why join us?</label>
+                <textarea name="reason" rows="3" required placeholder="Tell us why you love photography..."
+                    class="input"></textarea>
+            </div>
+            <div>
+                <label>🌈 Favorite Photography Style:</label>
+                <select name="fav_style" class="input">
+                    <option value="">Select preferred style</option>
+                    <option>Portrait</option>
+                    <option>Landscape</option>
+                    <option>Street</option>
+                    <option>Wildlife</option>
+                    <option>Sports</option>
+                    <option>Macro</option>
+                    <option>Astro</option>
+                </select>
+            </div>
+            <div>
+                <label>📅 Availability:</label>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <label><input type="checkbox" name="availability" value="Weekdays"> Weekdays</label>
+                    <label><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+                    <label><input type="checkbox" name="availability" value="Mornings"> Mornings</label>
+                    <label><input type="checkbox" name="availability" value="Evenings"> Evenings</label>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="cta-button">📸 Submit Application</button>
+                <button type="reset" class="cta-button"
+                    style="margin-left: 1rem; background-color: var(--secondary);">🔄 Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="photographer-footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>V-Click</h4>
+                <p>The official photography club of VIT Pune since 2015</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/vclick_vit" class="social-icon"><img src="img/instagram.png"
+                        alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© <span id="year"></span> V-Click Photography Club. All images © their respective authors.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+        $(".join-form").submit(function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            $("[required]").each(function () {
+                if (!$(this).val()) {
+                    $(this).css("border-color", "red");
+                    isValid = false;
+                } else {
+                    $(this).css("border-color", "green");
+                }
+            });
+
+            if (isValid) {
+                alert("Application submitted successfully!");
+                this.reset();
+            }
+        });
+
+    </script>
 </body>
+<script>
+
+
+
+    const container = document.getElementById('video-container');
+
+    const video = document.createElement('video');
+    video.src = 'img/bk.mp4';
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('id', 'bg-video');
+
+    container.appendChild(video);
+</script>
+
 </html>
